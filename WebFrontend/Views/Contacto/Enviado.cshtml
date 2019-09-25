@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Contacto | Vuelta al Cole | Michelin";
+}
+@section Styles{
+    <style>
+        #containerForm {margin-top:40px}
+		@@media screen and (max-width: 968px){
+			.containerMichelinForm { padding-top: 40px;}
+			#containerForm { margin-top: 0px;}
+		}
+    </style>
+}
+    <div class="content contentMichelinForm">
+        <div class="container containerMichelinForm">
+            <div id="containerForm">
+                <div class="tit">Contacta con nosotros</div>
+                <div class="txtEnviadoCon">
+                    <img src="~/images/img_smart.png" alt="TELÉFONO: 900 264 257">
+                    <br>
+                    TELÉFONO: <strong>900 264 257</strong>
+                    <br><br>
+                    <img src="~/images/img_arroba.png" alt="EMAIL: info@promocionesmichelin.es">
+                    <br>
+                    EMAIL: <strong style="color:#e01212">info@promocionesmichelin.es</strong>
+                    <br><br>
+                    <img src="~/images/img_clock.png" alt="Horario Contacto">
+                    <br>
+                    <span>
+                        HORARIO: DE LUNES A JUEVES DE 9 A 14 Y DE 16 A 19 HORAS, VIERNES DE 9 A 14 HORAS.
+                        <br>
+                        EXCEPTO FESTIVOS NACIONALES Y DE LA COMUNIDAD DE MADRID.
+                    </span>
+                    <br><br><br>
+                    <img src="~/images/img_flight.png" alt="Mensaje Enviado">
+                    <div class="titEnviado">MENSAJE ENVIADO</div>
+                    <div class="btnFrmEnviado">Finalizar</div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $("body").addClass("bindex_leg");
+        $(".btnFrmEnviado").on('click', function () {
+            window.location.href = "/es";
+        });
+    </script>
+}

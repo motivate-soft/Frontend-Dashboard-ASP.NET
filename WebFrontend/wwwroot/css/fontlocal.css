@@ -1,0 +1,27 @@
+/* CSS Document */
+
+
+@font-face {
+  font-family: 'MichelinBold';
+  src: url("/fonts/michelin/michelin-bold-webfont.eot");
+  src:
+    url("/fonts/amsipro2/michelin-bold-webfont.ttf") format('embedded-opentype'),
+    url("/fonts/amsipro2/michelin-bold-webfont.woff2") format('woff2'),
+    url("/fonts/amsipro2/michelin-bold-webfont.woff") format('woff'),
+    url("/fonts/amsipro2/michelin-bold-webfont.ttf") format('truetype'),
+    url("/fonts/amsipro2/michelin-bold-webfont.svg") format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MichelinSemiBold';
+  src: url("/fonts/michelin/michelin-semibold-bold-webfont.eot");
+  src:
+    url("/fonts/amsipro2/michelin-semibold-webfont.ttf") format('embedded-opentype'),
+    url("/fonts/amsipro2/michelin-semibold-bold-webfont.woff2") format('woff2'),
+    url("/fonts/amsipro2/michelin-semibold-bold-webfont.woff") format('woff'),
+    url("/fonts/amsipro2/michelin-semibold-bold-webfont.ttf") format('truetype'),
+    url("/fonts/amsipro2/michelin-semibold-bold-webfont.svg") format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

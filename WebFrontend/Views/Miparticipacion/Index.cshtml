@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Formulario | Vuelta al Cole | Michelin";
+    var id = ViewBag.id_par;
+    var status = ViewBag.status;
+    var comentarios_par = ViewBag.comentarios_par;
+    var motivo_par = ViewBag.motivo_par;
+    var resend_url = ViewBag.resend_url;
+}
+@section Styles{
+    <style>
+        .containerMichelin {
+            max-width: inherit
+        }
+    </style>
+}
+    <div class="content contentMichelinEsp">
+        <div class="container containerMichelinEsp">
+            <div id="containerEsp">
+                <div class="titEsp">Estado de tu participación</div>
+                <div class="txtEsp">
+                    ID participación: @id
+                </div>
+                @if (status == "Validado")
+                {
+                    <div style="margin: auto;max-width: 300px;text-align: center;padding-bottom: 10px;padding-top: 15px; border: 1px solid #0254aa;">
+                        <p class="validado">VALIDADO</p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <p class="exp1">
+                            Te hemos enviado un email y un SMS con tu regalo.<br />
+                            No olvides revisar la carpeta de SPAM.
+                        </p>
+                    </div>
+                }
+                else if (status == "Rechazado")
+                {
+                    <div style="margin: auto;max-width: 300px;text-align: center;padding-bottom: 10px;padding-top: 15px; border: 1px solid #0254aa;">
+                        <p class="rechazado">RECHAZADO</p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <p class="exp1">
+                            Tu participación se ha rechazado por el siguiente motivo:<br />
+                            "motivo @motivo_par & @comentarios_par"
+                        </p>
+                    </div>
+                }
+                else if (status == "Actualizando")
+                {
+                    <div style="margin: auto;max-width: 300px;text-align: center;padding-bottom: 10px;padding-top: 15px; border: 1px solid #0254aa;">
+                        <p class="actualizando">PENDIENTE DE VALIDAR</p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <p class="exp2">
+                            Estamos revisando tu factura.
+                            <br />
+                        </p>
+                    </div>
+                }
+                else if (status == "Modificando")
+                {
+                    <div style="margin: auto;max-width: 300px;text-align: center;padding-bottom: 10px;padding-top: 15px; border: 1px solid #0254aa;">
+                        <p class="modificando">REVISAR PARTICIPACIÓN</p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <p class="exp2">
+                            La imagen de la factura está cortada,  es borrosa o no es una factura válida.<br />
+                            Recuerda que el ticket de compra no es válido. <br />
+                            Necesitamos que subas de nuevo tu factura.
+                        </p>
+                        <p class="exp2">
+                            <a href="@resend_url">Pincha aquí para subir de nuevo la factura</a>
+                        </p>
+                    </div>
+                }
+                else if (status == "Pendiente")
+                {
+                    <div style="margin: auto;max-width: 300px;text-align: center;padding-bottom: 10px;padding-top: 15px; border: 1px solid #0254aa;">
+                        <p class="pendiente">
+                            PENDIENTE DE VALIDAR
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <p class="exp2">
+                            Te recordamos que en un plazo máximo de 5 días laborables <br />
+                            desde tu participación procederemos a su validación.
+                        </p>
+                        
+                    </div>
+                }
+                <div class="btnEsp">CERRAR</div>
+                <div class="titContacto">
+                    <img src="~/images/img_smart.png" alt="TELÉFONO: 900 264 257">
+                    <br>
+                    TELÉFONO: <strong>900 264 257</strong>
+                    <br><br>
+                    <img src="~/images/img_arroba.png" alt="EMAIL: info@promocionesmichelin.es">
+                    <br>
+                    EMAIL: <strong style="color:#e01212">info@promocionesmichelin.es</strong>
+                    <br><br>
+                    <img src="~/images/img_clock.png" alt="Horario Contacto">
+                    <br>
+                    <span>
+                        HORARIO: DE LUNES A JUEVES DE 9 A 14 Y DE 16 A 19 HORAS, VIERNES DE 9 A 14 HORAS.
+                        <br>
+                        EXCEPTO FESTIVOS NACIONALES Y DE LA COMUNIDAD DE MADRID.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        // initialize Css
+        $("body").addClass("bindex_det");
+        $(".btnEsp").on('click', function (data) {
+            window.location.href = "/es/inicio";
+        });
+    </script>
+}

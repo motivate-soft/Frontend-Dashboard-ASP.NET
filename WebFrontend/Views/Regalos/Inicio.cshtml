@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "MICHELIN";
+}
+@section Styles{
+    <style>
+        a:hover {
+            color: #ffe300;
+            text-decoration: none;
+        }
+    </style>
+}
+<div class="content contentMichelinIndex">
+    <div class="container containerMichelinIndex">
+        <div class="imgIndex"><img src="~/images/logo_index.png" class="img-fluid" /></div>
+        <div class="txtIndex">
+            <strong><span style="size:24px; color:#0254aa">UNA VUELTA SOBRESALIENTE</span><br /><br />Del 2 al 30 de septiembre,</strong><br>
+            Con la compra de neumáticos MICHELIN <br>
+            de llanta 18” o superior<br>
+            <span><strong>HASTA <span class="precIndex">60€</span> EN REGALOS</strong></span>
+        </div>
+        <div class="btnGroupbtnIndex">
+            <a href="/es/seleccion-participa" class="btnIndex">Participar</a>
+            <a href="/es/talleres" class="btnIndex" id="btnTallerInd">Talleres Adheridos</a>
+            <a href="/es/regalos" class="btnIndex" id="btnRegalosInd">Ver Regalos</a>
+        </div>
+        <div class="cuadrosGroup">
+            <div class="cuadros">
+                <div class="cuadrodetalle">
+                    <div class="subMainIndex">Coche, camioneta, 4x4/SUV</div>
+                    <div class="recMainIndex indWi33">Llanta 18” o superior</div>
+                    <div class="recMainIndex indWi33">Llanta 17”</div>
+                    <div class="recMainIndex indWi100"><span class="indDet00">4 neumáticos</span><span class="indDet01">60€</span><span class="indDet02">40€</span></div>
+                    <div class="recMainIndex indWi100"><span class="indDet00">2 neumáticos</span><span class="indDet01">30€</span><span class="indDet02">20€</span></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $("body").addClass("bindex");
+    </script>
+}

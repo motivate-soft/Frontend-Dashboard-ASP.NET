@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Regalos | Vuelta al Cole | Michelin";
+    var regalos_17_2 = ViewBag.regalos_17_2;
+    var regalos_17_4 = ViewBag.regalos_17_4;
+    var regalos_18_2 = ViewBag.regalos_18_2;
+    var regalos_18_4 = ViewBag.regalos_18_4;
+}
+@section Styles{
+    <style>
+        .contentMichelin {
+            background-color: #fff
+        }
+
+        .containerMichelin {
+            max-width: 940px
+        }
+
+        a:hover {
+            color: #ffe300;
+            text-decoration: none;
+        }
+        td a {
+            color: #000;
+        }
+    </style>
+}
+<div class="content contentMichelin">
+    <div class="container containerMichelin">
+        <div class="contentRegalos">
+            <div class="titRegalos">estos son los regalos que puedes conseguir</div>
+            <div class="divtableRegalos">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th colspan="5">coche, camioneta 4X4/SUV</th>
+                    </tr>
+                    <tr>
+                        <td class="tdTit tdWi00">Llanta</td>
+                        <td class="tdTit tdWi01">Nº de neumáticos</td>
+                        <td class="tdTit tdWi01">Importe</td>
+                        <td class="tdTit tdWi02" colspan="2">Regalos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitMain" rowspan="2">17"</td>
+                        <td class="tdTxt00">2</td>
+                        <td class="tdTxt00">20€</td>
+                        <td class="tdTxt01">
+                            @for (var i = 0; i < 4; i++)
+                            {
+                                var link = regalos_17_2[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_17_2[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                        <td class="tdTxt01">
+                            @for (var i = 4; i < regalos_17_2.Count; i++)
+                            {
+                                var link = regalos_17_2[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_17_2[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTxt00">4</td>
+                        <td class="tdTxt00">40€</td>
+                        <td class="tdTxt01">
+                            @for (var i = 0; i < 4; i++)
+                            {
+                                var link = regalos_17_4[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_17_4[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                        <td class="tdTxt01">
+                            @for (var i = 4; i < regalos_17_4.Count; i++)
+                            {
+                                var link = regalos_17_4[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_17_4[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitMain tdTitAmarillo" rowspan="3">18” O SUPERIOR</td>
+                        <td class="tdTxt00 tdAmarillo">2</td>
+                        <td class="tdTxt00 tdAmarillo">30€</td>
+                        <td class="tdTxt01 tdAmarillo">
+                            @for (var i = 0; i < 4; i++)
+                            {
+                                var link = regalos_18_2[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_18_2[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                        <td class="tdTxt01 tdAmarillo">
+                            @for (var i = 4; i < regalos_18_2.Count; i++)
+                            {
+                                var link = regalos_18_2[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_18_2[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTxt00 tdAmarillo" rowspan="2">4</td>
+                        <td class="tdTxt00 tdAmarillo" rowspan="2">60€</td>
+                        <td class="tdTxt01 tdAmarillo">
+                            @for (var i = 0; i < 4; i++)
+                            {
+                                var link = regalos_18_4[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_18_4[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                        <td class="tdTxt01 tdAmarillo">
+                            @for (var i = 4; i < regalos_18_4.Count; i++)
+                            {
+                                var link = regalos_18_4[i].link.Replace("-seleccion", "");
+                                <a href="@link" style="cursor:pointer">@regalos_18_4[i].descripcion</a>
+                                <br>
+                            }
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="btnContentPremios">
+                <div class="btnFrmEnviado">VOLVER</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $(".btnFrmEnviado").on('click', function () {
+            window.location.href = "/es";
+        });
+        console.log("@regalos_17_2");
+    </script>
+}

@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "CHAQUETA MICHELIN | Detalle Regalo | Vuelta al Cole | Michelin";
+    var currentUrl = Context.Request.Path;
+    var seleccionBtn = false;
+    if (currentUrl.ToString().Contains("-seleccion"))
+    {
+        seleccionBtn = true;
+    }
+    var hiddenidsession = ViewBag.hiddenidsession;
+}
+@section Styles{
+    <style>
+        @@media screen and (min-width: 576px) and (max-height: 870px) {
+			.bindex_det {background-image:url(images/fnd_ind_body_fixed_det.png); background-position: left top;}
+		}
+        #containerRegalo {
+            max-width: 750px;
+        }
+        .cbotalla {
+            min-width: 270px;
+            height: 30px;
+            font-size: 11px;
+        }
+    </style>
+}
+<div class="content contentMichelinRegalo">
+    <div class="container containerMichelinRegalo">
+        <div id="containerRegalo">
+            <div class="volver">
+                @if (seleccionBtn)
+                {
+                    <a href="/es/seleccion-regalo">< Volver</a>
+                }
+                else
+                {
+                    <a href="/es/regalos">< Volver</a>
+                }
+            </div>
+            <div class="row" style="margin: 30px 0px 15px 0px;">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 leftPremio">
+                    <img src="~/images/premios/es/regalo_chaqueta.jpg" alt="CHAQUETA MICHELIN" class="img-fluid" style="max-width:300px;" />
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <div class="titPremio">CHAQUETA MICHELIN</div>
+                    <div class="txtPremio">
+                        <p>Chaqueta ultra ligera con capucha en color azul marino. La  cremallera en azul cobalto y el ribeteado en amarillo le dan un toque de color.</p>
+                        <p>Incluye el bordado de la cabeza del muñeco MICHELIN en el lado izquierdo del pecho y el logotipo en la parte posterior del hombro derecho.</p>
+                        <p>Material: Nylon y plumón.</p>
+                        <p>Tallas L y XL.</p>
+                        <p>50 unidades disponibles por cada talla.</p>
+                        <p>No se admiten devoluciones.</p>
+                    </div>
+                    @if (seleccionBtn)
+                    {
+                        <form id="regalo-detail-form" action="/es/seleccion-regalo-detail-form" method="post">
+                            <input type="hidden" name="hiddenidsession" value="@hiddenidsession">
+                            <p style="margin: 10px 10px 2px 40px">TALLA</p>
+                            <select class="form-control input100 cbotalla" name="talla_par">
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                            <div class="frmBtn"><div class="btnPremio">Seleccionar</div></div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="frmBtn"><div class="btnPremio Volver">Volver</div></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $("body").addClass("bindex_det");
+        $(".btnPremio").on('click', function () {
+            var form = $("form[id=regalo-detail-form]");
+            form.submit();
+        });
+        $(".Volver").on('click', function () {
+            window.location.href = "/es/regalos";
+        });
+    </script>
+}

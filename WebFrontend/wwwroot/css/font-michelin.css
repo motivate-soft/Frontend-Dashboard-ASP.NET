@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Michelin';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Light.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Light.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Light.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Light.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Light.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Light.svg#Michelin-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Michelin';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Regular.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Regular.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Regular.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Regular.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Regular.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Regular.svg#Michelin-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MichelinSemiBold';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-SemiBold.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-SemiBold.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-SemiBold.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-SemiBold.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-SemiBold.svg#Michelin-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Michelin';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Bold.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Bold.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Bold.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Bold.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Bold.svg#Michelin-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MichelinBold';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Black.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Black.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Black.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Black.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Black.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Michelin-Black.svg#Michelin-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+
+@font-face {
+  font-family: 'Arial';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial.svg#Arial') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arial Michelin';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Italic.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Italic.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Italic.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Italic.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Italic.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Italic.svg#Arial-Italic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ArialBold';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Bold.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Bold.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Bold.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Bold.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Bold.svg#Arial-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ArialBoldIt';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-BoldItalic.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-BoldItalic.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-BoldItalic.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-BoldItalic.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-BoldItalic.svg#Arial-BoldItalic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ArialBlack';
+  src: url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Black.eot');
+  src:
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Black.woff2') format('woff2'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Black.woff') format('woff'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Black.ttf') format('truetype'),
+    url('https://dgaddcosprod.blob.core.windows.net/b2c-experience-production/assets/cjswzegi900012rnffbfz1pc6/modules/my-apostrophe-assets/fonts/Arial-Black.svg#Arial-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}

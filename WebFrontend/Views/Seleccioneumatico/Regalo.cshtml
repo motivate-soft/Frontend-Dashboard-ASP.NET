@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Selecciona tu Regalo | Michelin";
+    var regalos = ViewBag.regalos;
+    var hiddenidsession = ViewBag.hiddenidsession;
+}
+@section Styles{
+    <style>
+            .containerMichelinRegalo {max-width: 1100px}
+		    #containerRegalo {margin-top: 60px}
+		    @@media screen and (max-width: 1024px){  #containerRegalo { margin: 0px auto 40px auto;}}
+            .regalo {
+                width: 350px;
+            }
+    </style>
+}
+    <div class="content contentMichelinRegalo">
+        <div class="container containerMichelinRegalo">
+            <div id="containerRegalo">
+                <div class="tit">Selecciona <span><img src="~/images/txt_tu.png" alt="tu" class="img-fluid" style="vertical-align: text-bottom;" /></span> regalo</div>
+                <div class="contentRegalos">
+                    <div class="backRegalo">
+                        @{
+                            foreach (var item in regalos)
+                            {
+                        <form id="regalo-form" action="/es/seleccion-regalo-form" method="post" style="display: inline-flex;">
+                            <input type="hidden" name="hiddenidsession" value="@hiddenidsession" />
+                            <input type="hidden" name="link" value="/es/@item.link" />
+                            <input type="hidden" name="tipo" value="@item.tipo" />
+                            <input type="hidden" name="id" value="@item.id_regalo" />
+                            <input type="hidden" name="descripcion" value="@item.descripcion" />
+                            <div class="btn regalo">@item.descripcion</div>
+                        </form>
+                            }
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $("body").addClass("bindex_det");
+
+        $(".regalo").on('click', function () {
+            $(this).parent().submit();
+        });
+        
+    </script>
+}

@@ -1,0 +1,43 @@
+﻿@model WebFrontend.Models.ParticipationEnviarVirtualViewModel
+@{
+    ViewData["Title"] = "Enhorabuena | Vuelta al Cole | Michelin";
+    var url = ViewBag.url;
+}
+@section Styles{
+    <style>
+        .containerMichelin {
+            max-width: inherit
+        }
+    </style>
+}
+    <div class="content contentMichelinEsp">
+        <div class="container containerMichelinEsp">
+            <div id="containerEsp">
+                <div class="titEsp">¡ENHORABUENA!</div>
+                <div class="txtEsp">
+                    HEMOS RECIBIDO TU PARTICIPACIÓN CORRECTAMENTE.<br />
+                    EN UN PLAZO MÁXIMO DE 5 DÍAS LABORABLES PROCEDEREMOS A SU VALIDACIÓN.<br />
+                    EN CASO DE SER CORRECTA RECIBIRÁS UN EMAIL Y SMS CON TU REGALO.<br /><br />
+                    NO OLVIDES REVISAR TU CARPETA DE SPAM
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="@url" style="font-weight:bold; color: #000;">Consulta aquí el estado de tu participación </a>
+                </div>
+                <div class="btnEsp">Finalizar</div>
+
+            </div>
+
+        </div>
+    </div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        // initialize Css
+        $("body").addClass("bindex_det");
+        $(".btnEsp").on('click', function (data) {
+            window.location.href = "/es/inicio";
+        });
+    </script>
+    
+}

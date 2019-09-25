@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Formulario | Vuelta al Cole | Michelin";
+    var url_par = ViewBag.url_par;
+    var taller = ViewBag.taller;
+    var nombre_par = ViewBag.nombre_par;
+    var apellidos_par = ViewBag.apellidos_par;
+    var email_par = ViewBag.email_par;
+    var nacionalidad_par = ViewBag.nacionalidad_par;
+    var telefono_par = ViewBag.telefono_par;
+}
+@section Styles{
+    <style>
+        /* talleres select style */
+        .select2-selection__rendered {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .select2-selection--single {
+            height: 30px !important;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-width: 5px 5px 0 5px !important;
+            border-color: black transparent transparent transparent !important;
+        }
+        /* upload button style */
+        .adduploadbtn {
+            background-color: #0254aa;
+            font-family: ArialBoldIt;
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.6px;
+            text-align: center;
+            color: #ffe300;
+            padding: 10px;
+            /* width: 290px; */
+            margin: 7px auto;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .borderLine {
+            border: 1px solid red;
+        }
+
+        .borderdotLine {
+            border: 1.2px dotted red;
+        }
+    </style>
+}
+<div class="content contentMichelinForm">
+    <div class="container containerMichelinForm">
+        <div id="containerForm">
+            <div class="tit">Completa el formulario para <br />recibir <img src="~/images/txt_tu.png" alt="tu" class="img-fluid" style="vertical-align: text-bottom;" /> regalo</div>
+            <div class="titIndicar">ADJUNTA TU FACTURA</div>
+            <div class="titError2" style="display:none;">Completa los campos marcados en rojo</div>
+            <form id="frmFormulario">
+                <input type="hidden" name="url_par" value="@url_par">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" class="form-control input100" value="@taller" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" class="form-control input100" value="@nombre_par" readonly>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" class="form-control input100" value="@apellidos_par" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" class="form-control input100" value="@email_par" readonly>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" class="form-control input100" value="@nacionalidad_par" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" class="form-control input100" value="@telefono_par" readonly>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row upload_area">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <label class="control-label etFrm">Subir imagen 1</label>
+                        <div class="form-group">
+                            <input type="file" name="ImageFiles" class="adjunto">
+                            <input type="hidden" name="adjunto_par" id="adjunto_par" />
+                            <div class="upload-area adjunto-file first-file">
+                                <p class="p1"><u>Selecciona</u> o arrastra un archivo<br />(M&aacute;x 4MB, JPG/PNG/PDF)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol adduploadbtn-area">
+                        <label class="control-label etFrm"></label>
+                        <div class="form-group">
+                            <div class="adduploadbtn">TENGO OTRA FACTURA</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 frmCol">
+                        <div id="btnFrm">
+                            <div class="btnFrm" id="btnEnivar">Enviar PArticipación</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="~/js/views/Mhpr/index.js"></script>
+}

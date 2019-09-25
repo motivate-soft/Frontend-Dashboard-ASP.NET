@@ -1,0 +1,36 @@
+﻿@model WebFrontend.Models.ParticipationEnviarVirtualViewModel
+@{
+    ViewData["Title"] = "Lo Sentimos | Vuelta al Cole | Michelin";
+}
+@section Styles{
+    <style>
+        .containerMichelin {
+            max-width: inherit
+        }
+    </style>
+}
+    <div class="content contentMichelinEsp">
+        <div class="container containerMichelinEsp">
+            <div id="containerEsp">
+                <div class="titEsp">LO SENTIMOS…</div>
+                <div class="txtEsp">
+                    HAS SUPERADO EL MÁXIMO PERMITIDO DE 8 NEUMÁTICOS POR DNI/CIF O EMAIL.
+                </div>
+                <div class="btnEsp">volver</div>
+            </div>
+
+        </div>
+    </div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // initialize Css
+        $("body").addClass("bindex_det");
+        $(".btnEsp").on('click', function (data) {
+            window.location.href = "/es/inicio";
+        });
+    </script>
+    
+}

@@ -1,0 +1,6 @@
+FechaCaducidad: 15/03/2020
+URL: http://testurl/
+URL_BASE: http://miurl/
+Timezone: Central European Standard Time
+DOMAIN01: https://dashboardtestmi.azurewebsites.net/es
+DOMAIN02: https://dashboardtestmi.azurewebsites.net/pt

@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Contacto | Vuelta al Cole | Michelin";
+}
+@section Styles{
+    <style>
+        #containerForm {
+            margin-top: 40px
+        }
+
+        @@media screen and (max-width: 968px) {
+            .containerMichelinForm {
+                padding-top: 40px;
+            }
+
+            #containerForm {
+                margin-top: 0px;
+            }
+        }
+        .borderLine {
+            border: 1px solid red;
+        }
+    </style>
+}
+<div class="content contentMichelinForm">
+    <div class="container containerMichelinForm">
+        <div id="containerForm">
+            <div class="tit">Contacta con nosotros</div>
+            <div class="titContacto">
+                <img src="~/images/img_smart.png" alt="TELÉFONO: 900 264 257">
+                <br>
+                TELÉFONO: <strong>900 264 257</strong>
+                <br><br>
+                <img src="~/images/img_arroba.png" alt="EMAIL: info@promocionesmichelin.es">
+                <br>
+                EMAIL: <strong style="color:#e01212">info@promocionesmichelin.es</strong>
+                <br><br>
+                <img src="~/images/img_clock.png" alt="Horario Contacto">
+                <br>
+                <span>
+                    HORARIO: DE LUNES A JUEVES DE 9 A 14 Y DE 16 A 19 HORAS, VIERNES DE 9 A 14 HORAS.
+                    <br>
+                    EXCEPTO FESTIVOS NACIONALES Y DE LA COMUNIDAD DE MADRID.
+                </span>
+            </div>
+            
+            <form id="frmFormulario">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput nombre">
+                            <input type="text" name="nombre" class="form-control input100" placeholder="Nombre" required>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" name="apellidos" class="form-control input100" placeholder="Apellidos" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" name="movil" class="form-control input100" placeholder="Móvil" required maxlength="12">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <input type="text" name="email" class="form-control input100" placeholder="Email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 frmCol">
+                        <div class="form-group sepinput">
+                            <textarea name="escribe" class="form-control textareacontacto input100" rows="8" placeholder="Escribe aqui tu consulta" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 frmCol">
+                        <div class="checkbox checkbox-primary" id="chk_pri">
+                            <input id="chckprivacidad" type="checkbox" name="chckprivacidad" required>
+                            <label id="labchckprivacidad" for="chckprivacidad">Acepto la Política de Privacidad.</label>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 frmCol">
+                        <div id="contactRecaptcha">
+                            <div class="g-recaptcha" data-sitekey="6LdHxLIUAAAAAGeLKc0UsxWaWZ2gtr9fMRX9f6YY" data-callback="recaptcha_callback();"></div>
+                            <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 frmCol">
+                        <div id="btnFrmContacto">
+                            <div class="btnFrm" id="btnCV">Volver</div>
+                            <div class="btnFrm" id="btnCE">Enviar</div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="~/js/views/Contacto/index.js"></script>
+   
+}

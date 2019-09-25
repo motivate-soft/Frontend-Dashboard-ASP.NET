@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "CHEQUE REGALO VIVAELCOLE 30€ | Detalle Regalo | Vuelta al Cole | Michelin";
+    var currentUrl = Context.Request.Path;
+    var seleccionBtn = false;
+    if (currentUrl.ToString().Contains("-seleccion"))
+    {
+        seleccionBtn = true;
+    }
+    var hiddenidsession = ViewBag.hiddenidsession;
+}
+@section Styles{
+    <style>
+        @@media screen and (min-width: 576px) and (max-height: 870px) {
+			.bindex_det {background-image:url(images/fnd_ind_body_fixed_det.png); background-position: left top;}
+		}
+        #containerRegalo {
+            max-width: 750px;
+        }
+
+    </style>
+}
+<div class="content contentMichelinRegalo">
+    <div class="container containerMichelinRegalo">
+        <div id="containerRegalo">
+            <div class="volver">
+                @if (seleccionBtn)
+                {
+                    <a href="/es/seleccion-regalo">< Volver</a>
+                }
+                else
+                {
+                    <a href="/es/regalos">< Volver</a>
+                }
+            </div>
+            <div class="row" style="margin: 30px 0px 15px 0px;">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 leftPremio">
+                    <img src="~/images/premios/es/regalo_vivalecole.jpg" alt="CHEQUE REGALO VIVAELCOLE" class="img-fluid" style="max-width:300px;"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <div class="titPremio">CHEQUE REGALO VIVAELCOLE 30€</div>
+                    <div class="txtPremio">
+                        <p>Aprovecha este cheque regalo de Viva el Cole para equipar a tus hijos para la vuelta al cole.</p>
+                        <p>Podrás canjear tu cupón por cualquiera de los más de 5.000 productos que tienes disponibles en Vivaelcole.com: Mochilas, estuches, material de papelería o maletas. Tenemos todas las marcas para que tus hijos vayan felices al colegio con su mochila favorita. </p>
+                        <p>Entrega en 24 horas. Sin importe mínimo de pedido. </p>
+                    </div>
+                    @if (seleccionBtn)
+                    {
+                        <form id="regalo-detail-form" action="/es/seleccion-regalo-detail-form" method="post">
+                            <input type="hidden" name="hiddenidsession" value="@hiddenidsession">
+                            <div class="frmBtn"><div class="btnPremio">Seleccionar</div></div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="frmBtn"><div class="btnPremio Volver">Volver</div></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $("body").addClass("bindex_det");
+        $(".btnPremio").on('click', function () {
+            var form = $("form[id=regalo-detail-form]");
+            form.submit();
+        });
+        $(".Volver").on('click', function () {
+            window.location.href = "/es/regalos";
+        });
+    </script>
+}

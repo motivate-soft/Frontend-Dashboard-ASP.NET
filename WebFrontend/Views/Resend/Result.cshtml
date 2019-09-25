@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Formulario | Vuelta al Cole | Michelin";
+    
+}
+@section Styles{
+    <style>
+        .containerMichelin {
+            max-width: inherit
+        }
+    </style>
+}
+    <div class="content contentMichelinEsp">
+        <div class="container containerMichelinEsp">
+            <div id="containerEsp">
+                <div class="titEsp">Factura subida correctamente</div>
+                <div class="txtEsp">
+                    La imagen de la factura ha sido actualizada en tu registro.<br />
+                    <br />
+                    EN UN PLAZO MÁXIMO DE 5 DÍAS LABORABLES PROCEDEREMOS A SU VALIDACIÓN.<br />
+                    <br />
+                    EN CASO DE SER CORRECTA RECIBIRÁS UN EMAIL Y SMS CON TU regalo.<br />
+                    <br />
+                    NO OLVIDES REVISAR TU CARPETA DE SPAM
+                </div>
+                <div class="btnEsp">CERRAR</div>
+
+            </div>
+
+        </div>
+    </div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        // initialize Css
+        $("body").addClass("bindex_det");
+        $(".btnEsp").on('click', function (data) {
+            window.location.href = "/es/inicio";
+        });
+    </script>
+}

@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Selección de Neumático Comprado | Vuelta al Cole | Michelin";
+}
+@section Styles{
+    <style>
+        .searchText {
+            display: block;
+            padding: 5px 0px;
+            margin: 10px 10px 10px 10px;
+            width: 92%;
+        }
+
+        .scroll {
+            height: 180px;
+            overflow-y: scroll;
+        }
+    </style>
+    <link rel="stylesheet" href="~/lib/select2/select2.min.css" />
+}
+<div class="content contentMichelinIndex">
+    <div class="container containerMichelinIndex">
+        <div id="contentSelNeu">
+            <div class="tit">Selecciona neumático comprado</div>
+            <div class="contentRuedas">
+                <form id="participa" method="post" action="/es/seleccion-select-form">
+                    <div id="ruedascoche">
+                        <div id="cboruedas" class="cbomenudesplegable" tabindex="1">
+                            <span class="cboCoche llanta_model">Modelo de neumático</span>
+                            <input type="hidden" name="llanta_model"/>
+                            <ul class="dropdown">
+                                <li><input type="text" class="searchText" id="llanta_model" placeholder="Buscar ..." /></li>
+                            </ul>
+                        </div>
+                        <div id="cboruedas2" class="cbomenudesplegable" tabindex="1">
+                            <span class="cboCoche llanta">Dimensión de la llanta</span>
+                            <input type="hidden" name="llanta" />
+                            <ul class="dropdown dropdow_m">
+                                <li><a href="#">17"</a></li>
+                                <li><a href="#">18" O SUPERIOR</a></li>
+                            </ul>
+                        </div>
+                        <div id="cbollantas" class="cbomenudesplegable" tabindex="1">
+                            <span class="cboCoche neumatico">Número de neumáticos comprados</span>
+                            <input type="hidden" name="neumatico" />
+                            <ul class="dropdown">
+                                <li><a href="#">2 Neumáticos</a></li>
+                                <li><a href="#">4 Neumáticos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="~/lib/select2/select2.min.js"></script>
+    <script src="~/js/views/Seleccioneumatico/index.js"></script>
+}
